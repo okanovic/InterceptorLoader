@@ -1,0 +1,12 @@
+<div *ngIf="loaderService.isLoading | async" class="center">
+    <mat-spinner mode="indeterminate"></mat-spinner>
+</div>
+<div>
+    <div class="row">
+        <div class="container mt-3">
+            <ul class="list-group" *ngFor="let item of posts">
+                <li class="list-group-item">{{item.id}} - {{item.title}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
